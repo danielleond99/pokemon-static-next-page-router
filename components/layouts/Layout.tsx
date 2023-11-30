@@ -1,5 +1,6 @@
 import { FC, ReactElement } from "react";
 import Head from "next/head";
+import { Nabvar } from "../ui";
 
 interface ILayoutProps {
   title?: string;
@@ -15,8 +16,8 @@ export const Layout: FC<ILayoutProps> = ({ children, title = "" }) => {
         <meta name="description" content="Informació sobre los pokemones" />
         <meta name="keywords" content="pokemon, pokedex" />
       </Head>
-
-      <main>{children}</main>
+      <Nabvar />
+      <main className="mx-5 my-2">{children}</main>
     </>
   );
 };
